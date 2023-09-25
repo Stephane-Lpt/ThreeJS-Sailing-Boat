@@ -17,19 +17,19 @@ const canvas = document.querySelector('canvas.webgl')
 const scene = new THREE.Scene()
 
 // Loader
-// const loader = new GLTFLoader();
-// var hobieCat;
-//
-// loader.load( './models/hobieCatMin1.glb', function ( gltf ){
-//   hobieCat = gltf.scene;  // hobieCat 3D object is loaded
-//   hobieCat.scale.set(2, 2, 2);
-//   hobieCat.position.x = 0;
-//   hobieCat.position.y = 0;
-//   hobieCat.position.z = 0;
-//   hobieCat.rotation.y = -MATH.pi/2;
-//   scene.add(gltf.scene)
-//   tick();
-// });
+const loader = new GLTFLoader();
+var hobieCat;
+
+loader.load( './models/hobieCatMin1.glb', function ( gltf ){
+  hobieCat = gltf.scene;  // hobieCat 3D object is loaded
+  hobieCat.scale.set(2, 2, 2);
+  hobieCat.position.x = 0;
+  hobieCat.position.y = 0;
+  hobieCat.position.z = 0;
+  hobieCat.rotation.y = -MATH.pi/2;
+  scene.add(gltf.scene)
+  tick();
+});
 
 
 // Functions
@@ -91,11 +91,11 @@ const material = new THREE.MeshBasicMaterial( {color: 0x00ff00} );
 
 // Mesh
 
-const cube = new THREE.Mesh( geometry, material );
-cube.position.x = 0;
-cube.position.y = 0;
-cube.position.z = 0;
-scene.add( cube );
+// const cube = new THREE.Mesh( geometry, material );
+// cube.position.x = 0;
+// cube.position.y = 0;
+// cube.position.z = 0;
+// scene.add( cube );
 
 // Lights
 
