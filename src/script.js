@@ -24,7 +24,7 @@ loader.load( './models/hobieCatMin1.glb', function ( gltf ){
   hobieCat = gltf.scene;  // hobieCat 3D object is loaded
   hobieCat.scale.set(2, 2, 2);
   hobieCat.position.x = 0;
-  hobieCat.position.y = 0;
+  hobieCat.position.y = 1.5;
   hobieCat.position.z = 0;
   hobieCat.rotation.y = -MATH.pi/2;
   scene.add(gltf.scene)
